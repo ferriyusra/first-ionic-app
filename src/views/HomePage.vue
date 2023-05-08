@@ -1,56 +1,32 @@
 <template>
-  <ion-page>
-    <ion-header :translucent="true">
-      <ion-toolbar>
-        <ion-title>Blank</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-    <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
-      <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-      </div>
-    </ion-content>
-  </ion-page>
+	<ion-page>
+		<tab-1-header />
+		<tab-1-content>
+			<ion-list>
+				<tab-1-item>
+					<template #title>
+						<h1>Create Idea</h1>
+					</template>
+					<template #subtitle> Run Idea By Brandy </template>
+					<template #badge> 5 Days </template>
+				</tab-1-item>
+			</ion-list>
+		</tab-1-content>
+	</ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import TabHeader from '../components/TabHeader.vue';
+import TabContent from '../components/TabContent.vue';
+import TabFooter from '../components/TabFooter.vue';
 </script>
 
-<style scoped>
-#container {
-  text-align: center;
-  
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-</style>
+<script lang="ts">
+export default {
+	components: {
+		TabHeader,
+		TabContent,
+		TabFooter,
+	},
+};
+</script>
